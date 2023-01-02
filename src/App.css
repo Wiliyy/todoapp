@@ -1,0 +1,173 @@
+
+:root {
+  --background-color : #1d1d1e;
+  --input-color : #7c7979;
+  --input-shadow : #313131;
+  --list-color : #cececed9;
+  --list-completed : #473D49;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0
+}
+
+.TodoApp
+{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: start;
+  padding: 50px 150px 50px 150px;
+  background-color: var(--background-color);
+}
+
+
+
+.TodoApp__input{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.TodoApp__input input{
+  background-color: var(--background-color);
+  color:var(--list-color);
+  width:clamp(85% , 90% , 95%);
+  height: 50px;
+  border-radius:10px;
+  border: 0px solid #000;
+  box-shadow:20px 0px 10px 0px var(--input-shadow);
+  box-shadow:-1px -0px 10px 0px var(--input-shadow);
+  font-size: 18px;
+  padding: 0 0 0 20px;
+}
+.TodoApp__input button{
+  box-shadow:20px 0px 10px 0px var(--input-shadow);
+  box-shadow:-1px -0px 10px 0px var(--input-shadow);
+  background-color: var(--background-color);
+  width: 50px;
+  border-radius:50px;
+  font-size: 35px;
+  border: 0px solid #000;
+  color: var(--list-color);
+}
+
+.TodoApp__input__errorMessage{
+  padding: 20px;
+  color: var(--list-color);
+  font-size: 22px;
+  font-weight: bold;
+}
+
+
+.TodoApp__List {
+  display: flex;
+  align-items: center;
+  width: 99%;
+  text-align: left;
+  height: 100%;
+  cursor: pointer;
+  font-size: 1.4rem;
+  justify-content: space-between;
+}
+
+.Listdate_left{
+  font-size:.9rem;
+  color:#3b3b3be1;
+  padding:5px 0 0 10px; 
+  font-style: 800;
+}
+.Listdate_complete{
+  font-size:.9rem;
+  color:#808080e1;
+  padding:5px 0 0 10px; 
+  font-style: 800;
+}
+.TodoApp__List__deleteIcon {
+  margin: 10px;
+  border: 0px solid #000;
+  background-color: transparent;
+  font-size: 24px;
+  cursor: pointer;
+  color: #000;
+}
+.TodoApp__List__deleteIcon-completed {
+  margin: 10px;
+  border: 0px solid #000;
+  background-color: transparent;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+}
+
+
+.TodoApp__List__lift{
+  margin: 40px 0 0 0;
+  background-color: var(--list-color);
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  border-radius:10px;
+  list-style-type: none;
+  border: 1px solid #000;
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
+  padding: 0 20px 0 20px;
+  font-weight: 100;
+}
+
+.TodoApp__List__completed{
+  margin: 40px 0 0 0;
+  background-color:var(--list-completed);
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  border-radius:10px;
+  list-style-type: none;
+  border: 1px solid #000;
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
+  padding: 0 20px 0 20px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.Listtext__completed{
+  text-decoration: line-through;
+  letter-spacing: 0.3rem;
+  font-size:1.3rem;
+}
+.Listtext__left{
+  font-size:1.9rem;
+  
+}
+
+.TodoApp__input__total{
+  position: fixed;
+  bottom:20px;
+  left: 150px;
+  width: 70px;
+  text-align: left;
+  font-size: 20px;
+  color: var(--list-color);
+}
+.TodoApp__input__total p{
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+}
+
+@media (max-width: 768px)
+{
+  .TodoApp
+{
+  padding: 20px 30px 20px 30px;
+}
+.TodoApp__input{
+  margin: 10px;
+}
+}
